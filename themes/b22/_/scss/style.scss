@@ -164,7 +164,7 @@ footer {
     p { color: $b22-black; }
     nav{ 
       ul{
-        li{ 
+        li{ display: inline; padding-right:50px;
           a{ color: $b22-black; }
         }
       }
