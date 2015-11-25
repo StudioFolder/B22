@@ -25,7 +25,7 @@ if (has_post_thumbnail( $post->ID ) ){
 
 			<div class="single-title"><h2 class="page-title"><?php echo get_the_title(); ?></h2></div>
 
-			<p class="meta"><span class="date"><?php echo get_the_date(); ?></span></p>
+			<!--<p class="meta"><span class="date"><?php echo get_the_date(); ?></span></p>-->
 
 		</div>
 
