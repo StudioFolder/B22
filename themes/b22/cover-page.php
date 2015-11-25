@@ -4,14 +4,17 @@ Template Name: cover page template
 */
 ?>
 
+
 <?php get_header(); ?>
 
-<?php 
-if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-	the_post_thumbnail();
-} 
+
+<?php
+// check if the post or page has a Featured Image assigned to it.
+if ( has_post_thumbnail() ) {
+    the_post_thumbnail();
+}
 ?>
-<?php the_content(); ?>
+
 
 <div class="header">
 	<img src="<?php echo $feat_img_src; ?>" class="responsive" />

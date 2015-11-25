@@ -1,17 +1,14 @@
 <?php
 
 	add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'post-thumbnails', array( 'post', 'page' ) ); /* Use featured images in pages*/
-	
+
 	/* Change the post excerpt length */
 //	add_filter('excerpt_length', 'my_excerpt_length');
 //	function my_excerpt_length($length) {
 //	return 30; }
 
-
 	/* Disable the Admin Bar. */
 	add_filter( 'show_admin_bar', '__return_false' ); 
-
 
 	/**
 	 * Register Multiple Taxonomies
