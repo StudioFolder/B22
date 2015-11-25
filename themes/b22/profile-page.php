@@ -18,13 +18,23 @@ Template Name: profile page template
 
 		<div class="col-xs-12"> <!-- Full-width column -->
 
-			<div class="single-title"><h2 class="page-title"><?php echo get_the_title(); ?></h2></div>
+			<div class="single-title">
+				<h2 class="page-title"><?php echo get_the_title(); ?></h2>
+			</div>
+
+	        <div class="entry">
+	        	<?php the_content(); ?>
+	    	</div>
 
 		</div>
 
-		<div class="col-sm-6 project_specifications"> <!-- Half-width column -->
+	<div class="row">
 
-			<?php the_field('project_specifications'); ?>
+		<div class="col-sm-6"> <!-- Half-width column -->
+
+		<div class="col-sm-6 profile_details"> <!-- Half-width column with class profile_details -->
+
+			<?php the_field('profile_details'); ?> <!-- get profile_details text -->
 			<?php?>
 
 		</div>

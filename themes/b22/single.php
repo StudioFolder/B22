@@ -50,7 +50,7 @@ if (has_post_thumbnail( $post->ID ) ){
 
 		</div>
 
-		<div class="col-sm-6">			
+		<div class="col-sm-6">
 
 			<?php /* echo '
 				<!-- 
