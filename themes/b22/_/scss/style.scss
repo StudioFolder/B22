@@ -127,6 +127,8 @@ img.responsive { width: 100%; height: auto; }
 .navbar { border-radius: 0; background: none; border: none; background: $b22-white; margin-bottom: 0; min-height: 20px;
   #menu-top-menu { float: right; }
 }
+ul.menu {display: inline-flex;
+}
 .navbar-inverse .navbar-nav>li>a { color: $b22-white; text-shadow: none; padding: 5px 0; margin: 0 10px; font-size: 15px;
   &:hover { border-bottom: 2px solid $b22-white; padding-bottom: 0; margin-bottom: 2px; }
 }
