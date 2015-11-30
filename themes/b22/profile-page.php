@@ -7,6 +7,9 @@ Template Name: profile page template
 
 <?php get_header(); ?>
 
+<?php if (have_posts()) : ?>
+
+<?php while (have_posts()) : the_post(); ?>
 
 <div class="header">
 	<img src="<?php echo $feat_img_src; ?>" class="responsive" />
@@ -28,5 +31,11 @@ Template Name: profile page template
 	</div>
 
 </div>
+
+
+<?php endwhile; endif; ?>
+<?php get_footer(); ?>
+
+<br class="clear" />
 
 <?php get_footer(); ?>
