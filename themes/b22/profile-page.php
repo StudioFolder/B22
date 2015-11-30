@@ -4,7 +4,6 @@ Template Name: profile page template
 */
 ?>
 
-
 <?php get_header(); ?>
 
 <?php if (have_posts()) : ?>
@@ -20,18 +19,22 @@ Template Name: profile page template
 	<div class="row">
 
 		<div class="col-xs-12"> <!-- Full-width column -->
-	        	<?php the_content(); ?>
+	        	<div class="h2">
+	        		<?php the_content(); ?>
+	        	</div>
 		</div>
 
 		<div class="col-sm-6"> <!-- Half-width column -->
-				<?php the_field('profile_details'); ?> <!-- get profile_details text -->
-				<?php?>
+			<!-- blank -->
+		</div>
+
+		<div class="col-sm-6"> <!-- Half-width column -->
+			<?php the_field('profile_details'); ?> <!-- get profile_details text --><?php?>
 		</div>
 
 	</div>
 
 </div>
-
 
 <?php endwhile; endif; ?>
 <?php get_footer(); ?>
