@@ -145,15 +145,13 @@ img.responsive { width: 100%; height: auto; }
 
 .menu-top-menu
 
-#page_wrap {
-  #tax_cloud {margin: 10% 0 20% 0;
-    p { color: $b22-black;
-        strong{ color: $b22-black; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;}
-        a { color: $b22-black; font-size: 30px;
-          &:hover { color: red; }
-          &.related { color: $b22-green; }
-        }  
-    }
+#tax_cloud {margin: 10% 0 20% 0;
+  p { color: $b22-black;
+      strong{ color: $b22-black; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;}
+      a { color: $b22-black; font-size: 30px;
+        &:hover { color: red; }
+        &.related { color: $b22-green; }
+      }  
   }
 }
 
