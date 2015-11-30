@@ -18,9 +18,11 @@ Template Name: profile page template
 
 		<div class="col-xs-12"> <!-- Full-width column -->
 
+<!--
 			<div class="single-title">
 				<h2 class="page-title"><?php echo get_the_title(); ?></h2>
 			</div>
+-->
 
 	        <div class="entry">
 	        	<?php the_content(); ?>
