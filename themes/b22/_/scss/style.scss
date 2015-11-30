@@ -13,6 +13,13 @@ $b22-white: #FAFAFA;
 $b22-green: #3AAF72;
 
 
+::selection {
+  background: $b22-green; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $b22-green; /* Gecko Browsers */
+}
+
 a { color: $b22-black; }
 a:hover { text-decoration: none; color: $b22-green; }
 
