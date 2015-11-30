@@ -143,21 +143,19 @@ img.responsive { width: 100%; height: auto; }
   li {padding-right: 40px;}
 }
 
-.menu-top-menu
-
 #tax_cloud {margin: 10% 0 20% 0;
   p { color: $b22-black;
       strong{ color: $b22-black; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;}
       a { color: $b22-black; font-size: 30px;
         &:hover { color: red; }
-        &.related { color: $b22-green; }
+/*        &.related { color: $b22-green !important; }*/
       }  
   }
 }
 
 #home-posts { 
   article {
-    h1 { font-size: 20px; }
+    h1 { font-size: 20px; margin-bottom: 40px;}
     h2 { font-size: 20px; }
   }
 }
@@ -167,6 +165,7 @@ img.responsive { width: 100%; height: auto; }
     li{ list-style: none; }
   }
   h2 {font-size: 54px; }
+  .single-title{margin:50px 0px; }
 }
 
 
