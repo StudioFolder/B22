@@ -15,7 +15,7 @@ Template Name: profile page template
 <div id="page_wrap" class="container home">
 
 	<div class="row">
-
+	        	<?php the_content(); ?>
 		<div class="col-xs-12"> <!-- Full-width column -->
 
 	        <div class="entry">
@@ -23,8 +23,6 @@ Template Name: profile page template
 	    	</div>
 
 		</div>
-
-	<div class="row">
 
 		<div class="col-sm-6"> <!-- Half-width column -->
 
