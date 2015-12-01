@@ -1,7 +1,6 @@
 <footer>
 
   <div class="container">
-  <p>
     <nav>
       <ul>
         <li><a href="www.b22.it">B22</a></li>
@@ -9,7 +8,6 @@
         <li><a href="mailto:office@b22.it">office@b22.it</a></li>
       </ul>
     </nav>
-  </p>
   </div>
 
 </footer>
