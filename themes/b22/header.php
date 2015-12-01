@@ -74,17 +74,15 @@
 
 		        <div class="navbar-header">
 
+					<object type="image/svg+xml" data="../b22-logo.svg"></object>
+
+
 		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 		            <span class="sr-only">Toggle navigation</span>
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		          </button>
-
-			<object type="image/svg+xml" data="../B22-logo.svg">Your browser does not support SVG</object>
-			<object type="image/svg+xml" data="../B22-logo.svg">Your browser does not support SVG</object>
-			
-			<?php echo file_get_contents("../B22-logo.svg"); ?>
 
 		        </div>
 
