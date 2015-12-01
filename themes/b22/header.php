@@ -12,7 +12,7 @@
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 
-<head id="www-sitename-com" data-template-set="html5-reset">
+<head id="www.B22.it" data-template-set="html5-reset">
 
 	<meta charset="utf-8">
 	
@@ -80,6 +80,11 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		          </button>
+
+			<object type="image/svg+xml" data="B22-logo.svg">Your browser does not support SVG</object>
+			<object type="image/svg+xml" data="B22-logo.svg">Your browser does not support SVG</object>
+			
+			<?php echo file_get_contents("B22-logo.svg"); ?>
 
 		        </div>
 
