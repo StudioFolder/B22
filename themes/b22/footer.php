@@ -1,50 +1,15 @@
 <footer>
 
   <div class="container">
-    
+  <p>
     <nav>
-
-      <!-- wp menu -->
-<!--
-      <?php
-
-      $top_menu = array(
-        'theme_location'  => '',
-        'menu'            => 'top menu',
-        'container'       => '',
-        'container_class' => '',
-        'container_id'    => '',
-        'menu_class'      => 'menu',
-        'menu_id'         => '',
-        'echo'            => true,
-        'fallback_cb'     => 'wp_page_menu',
-        'before'          => '',
-        'after'           => '',
-        'link_before'     => '',
-        'link_after'      => '',
-        'items_wrap'      => '<ul id="%1$s" class="main %2$s">%3$s</ul>',
-        'depth'           => 0,
-        'walker'          => ''
-      );
-
-      wp_nav_menu( $top_menu );
-
-      ?>
--->
-      <!-- / wp menu -->
-
+      <ul>
+        <li><a href="www.b22.it">B22</a></li>
+        <li><a href="https://goo.gl/maps/z2yx8DdHNCp">via Montebello 24<br>I-20121 Milano</a></li>
+        <li><a href="mailto:office@b22.it">office@b22.it</a></li>
+      </ul>
     </nav>
-
-    <p>
-
-  <a href="www.b22.it">B22</a>
-	
-	<a href="https://goo.gl/maps/z2yx8DdHNCp">via Montebello 24<br>I-20121 Milano</a>
-
-	<a href="mailto:office@b22.it">office@b22.it</a>
-	
-    </p>
-
+  </p>
   </div>
 
 </footer>
