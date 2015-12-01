@@ -18,11 +18,14 @@ Template Name: profile page template
 
 	<div class="row">
 
+	<div id="profile_description">
+
 		<div class="col-xs-12"> <!-- Full-width column -->
 	        	<div class="h2">
 	        		<?php the_content(); ?>
 	        	</div>
 		</div>
+	</div>
 
 		<div class="col-sm-6"> <!-- Half-width column -->
 			<!-- blank -->

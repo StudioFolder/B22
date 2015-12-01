@@ -11,7 +11,7 @@ Template Name: home page template
 
 	<div id="tax_cloud">
 
-	<p><a class="view_all" href="#">view all (remove filters)</a></p>
+	<p><a class="view_all" href="#">All Projects</a></p>
 
 	<p>
 

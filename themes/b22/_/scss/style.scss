@@ -139,8 +139,8 @@ img.responsive { width: 100%; height: auto; }
 }
 
 #navbar {
-  ul {display: inline-flex;}
-  li {padding-right: 40px;}
+  ul {display: inline-flex; float: right;}
+  li {padding-left: 40px;}
 }
 
 #tax_cloud {margin: 10% 0 20% 0;
@@ -148,9 +148,14 @@ img.responsive { width: 100%; height: auto; }
       strong{ color: $b22-black; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;}
       a { color: $b22-black; font-size: 30px;
         &:hover { color: red; }
-        &.related { color: $b22-green !important;}
-      }  
+        &.related { color: $b22-green !important;
+        }  
+      }
   }
+}
+
+#profile_description {
+  margin-bottom: 80px;
 }
 
 #home-posts { 
@@ -174,7 +179,7 @@ footer {
   margin: 20% 0 50px 0;
     p { color: $b22-black; }
     nav{ 
-      ul{ display: inline;
+      ul{ display: inline-flex;
         li{ padding-right:50px;
           a{ color: $b22-black; }
         }
