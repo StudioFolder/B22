@@ -64,6 +64,7 @@
 		  	<h1>
 			  	<a href="<?php bloginfo('url'); ?>" title="" accesskey="1">
 			  		<span class="logo"><?php bloginfo('name') ?></span>
+			  		<object type="image/svg+xml" data="../b22-logo.svg"></object>
 			  	</a>
 		  	</h1>
 
@@ -73,8 +74,6 @@
 
 
 		        <div class="navbar-header">
-
-					<object type="image/svg+xml" data="../b22-logo.svg"></object>
 
 
 		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
