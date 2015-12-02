@@ -2,6 +2,11 @@
  * Change background image on hover
  */
 
+
+// remap jQuery to $
+(function($){})(window.jQuery);
+
+
 $("#first").hover(function () {
 
     $("body").css("background-image", 'url("http://static.bbc.co.uk/solarsystem/img/ic/640/collections/space_exploration/space_exploration_large.jpg")');
