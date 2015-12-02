@@ -4,7 +4,6 @@ Template Name: cover page template
 */
 ?>
 
-
 <?php get_header(); ?>
 
 
