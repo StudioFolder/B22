@@ -25,4 +25,5 @@ Template Name: cover page template
 
 <?php endwhile; endif; ?>
 
-<?php get_footer(); ?>
+</body>
+</html>
