@@ -10,6 +10,10 @@ Template Name: cover page template
 
 <?php while (have_posts()) : the_post(); ?>
 
+<div class="header">
+	<img src="<?php echo $feat_img_src; ?>" class="responsive" />
+</div>
+
 <div id="cover">
 
 	<div class="header">

@@ -3,8 +3,7 @@
  */
 
 
-// remap jQuery to $
-(function($){})(window.jQuery);
+<script src="<?php bloginfo('template_directory') ?>/_/js/cover.js"></script>
 
 
 $("#first").hover(function () {
