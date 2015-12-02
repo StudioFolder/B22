@@ -57,6 +57,8 @@
 
 <body class="<?php if(is_home()){ echo ('page_home'); } else { echo ('page_internal'); } ?>">
 
+<?php do_action('wpml_add_language_selector'); ?>
+
 	<div class="page-header">
 
 	    <div class="container">
