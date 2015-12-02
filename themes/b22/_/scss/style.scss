@@ -169,9 +169,9 @@ img.responsive { width: 100%; height: auto; }
 }
 
 .single_page{
-  .post_attached_images{
-    li{ list-style: none; }
-  }
+  .column{padding-bottom:60px;}
+  .post_attached_images{li{ list-style: none; }
+    }
   h2 {font-size: 54px; }
   .single-title{margin:50px 0px; }
 }
