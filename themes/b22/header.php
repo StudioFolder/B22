@@ -40,6 +40,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/_/css/style.css">
 	
 	<script src="<?php bloginfo('template_directory') ?>/_/js/modernizr-1.7.min.js"></script>
+	<script src="<?php bloginfo('template_directory') ?>/_/js/cover.js"></script>
 	
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	
@@ -121,11 +122,11 @@
 
 					?>
 
-					<?php do_action('wpml_add_language_selector'); ?>
-					
 					<!-- / wp menu -->
 
 		        </div>
+
+				<?php do_action('wpml_add_language_selector'); ?>
 
 		        <!-- /.nav-collapse -->
 

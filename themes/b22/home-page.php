@@ -14,7 +14,7 @@ Template Name: home page template
 	<p><a class="view_all" href="#">All Projects</a></p>
 
 	<p>
-
+ s
 	<?php 
 	$args = array(
 	  'public'   => true,
