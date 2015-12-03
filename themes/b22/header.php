@@ -95,6 +95,10 @@
 
 		        <div id="navbar" class="collapse navbar-collapse">
 
+		        	<!-- language switcher -->
+				
+					<?php do_action('wpml_add_language_selector'); ?>
+
 					<!-- wp menu -->
 
 					<?php
@@ -125,8 +129,6 @@
 					<!-- / wp menu -->
 
 		        </div>
-
-				<?php do_action('wpml_add_language_selector'); ?>
 
 		        <!-- /.nav-collapse -->
 
