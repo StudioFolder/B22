@@ -1,26 +1,63 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,700|Roboto+Mono:100,300,700);
+/* line 7, style.scss */
 ::selection {
+  background: #3aaf72;
   /* WebKit/Blink Browsers */
-  background: #3aaf72;
 }
+
+/* line 10, style.scss */
 ::-moz-selection {
-  /* Gecko Browsers */
   background: #3aaf72;
+  /* Gecko Browsers */
 }
+
+/* line 14, style.scss */
 a {
   color: #2b2b2b;
 }
+
+/* line 15, style.scss */
 a:hover {
   text-decoration: none;
   color: #3aaf72;
 }
+
+/* line 17, style.scss */
 .mobile-only {
   display: none !important;
 }
+
+/* regole generali =========================================*/
+/* Sticky footer styles
+--------------------------------------------------
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  // Margin bottom by footer height
+  margin-bottom: 60px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  // Set the fixed height of the footer here
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+*/
+/* fonts */
+/* Neutralize styling:
+   Elements we want to clean out entirely: */
+/* line 68, style.scss */
 html, body, form {
   margin: 0;
   padding: 0;
 }
+
+/* line 69, style.scss */
 html {
   font-size: 100%;
   -ms-text-size-adjust: 100%;
@@ -28,6 +65,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   height: 100%;
 }
+
+/* line 76, style.scss */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
@@ -35,219 +74,283 @@ body {
   color: #2b2b2b;
   background-color: #fafafa;
   height: 100%;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+  /* Safari mobile fix */
 }
+
+/* line 85, style.scss */
 a {
   color: #2b2b2b;
   text-decoration: none;
   cursor: pointer;
 }
+
+/* line 91, style.scss */
 a:hover {
   color: #3aaf72;
   text-decoration: none;
 }
+
+/*
 a:focus {
-  color: #3aaf72;
+  color: $b22-green;
   text-decoration: none;
-  padding-bottom: 0px;
-  border-bottom: 0px solid;
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}*/
+/* line 102, style.scss */
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
+
+/* line 107, style.scss */
 img {
   border: 0;
 }
+
+/* line 108, style.scss */
 label {
   cursor: auto;
 }
+
+/* line 109, style.scss */
 h1, h2, h3, h4 {
   font-weight: normal;
 }
+
+/* line 110, style.scss */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /* Miscellaneous conveniences: */
 }
+
+/* Miscellaneous conveniences: */
+/* line 113, style.scss */
 fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
+
+/* line 114, style.scss */
 input, select, textarea {
   font: 18px/1.3;
   color: #3aaf72;
 }
+
+/* line 115, style.scss */
 .clear {
   clear: both;
 }
+
+/* line 116, style.scss */
 br.clear {
   clear: both;
   line-height: 0;
   height: 0;
 }
+
+/* line 117, style.scss */
 .left {
   float: left;
 }
+
+/* line 118, style.scss */
 .right {
   float: right;
 }
+
+/* line 119, style.scss */
 .center {
   text-align: center;
 }
+
+/* line 121, style.scss */
 .alignleft {
   float: left;
 }
+
+/* line 122, style.scss */
 .alignright {
   float: right;
 }
+
+/* line 124, style.scss */
 img.responsive {
   width: 100%;
   height: auto;
-  /* bootstrap reset */
 }
 
-/* content */
-#navbar ul {
-  display: inline-flex;
-  float: right;
-}
-#navbar li {
-  padding-left: 30px;
-  float: right;
-}
-#navbar li a {
-  text-decoration: none;
-  opacity: 0.85;
-}
-#navbar li a:hover {
-  opacity: 1.0;
-}
+/* bootstrap reset */
+/* line 129, style.scss */
 .navbar {
   border-radius: 0;
   background: none;
   border: none;
+  background: #fafafa;
   margin-bottom: 0;
   min-height: 20px;
 }
+/* line 130, style.scss */
 .navbar #menu-top-menu {
   float: right;
 }
-/*.navbar-inverse .navbar-nav > li > a {
-  color: #fff;
-  opacity: 0.85;
+
+/* line 132, style.scss */
+.navbar-inverse .navbar-nav > li > a {
+  color: #fafafa;
   text-shadow: none;
-  text-decoration: none;
   padding: 5px 0;
   margin: 0 10px;
   font-size: 15px;
-}*/
-#navbar .navbar-inverse .navbar-nav > li > a {
-  color: #fff;
 }
-.navbar-inverse a {
-  color: #fff;
+/* line 133, style.scss */
+.navbar-inverse .navbar-nav > li > a:hover {
+  border-bottom: 2px solid #fafafa;
+  padding-bottom: 0;
+  margin-bottom: 2px;
 }
-#navbar .navbar-inverse .navbar-nav > li > a:hover {
-  opacity: 1.0;
+
+/* line 137, style.scss */
+#navbar ul {
+  display: inline-flex;
+  float: right;
 }
+/* line 138, style.scss */
+#navbar li {
+  padding-left: 40px;
+  float: right;
+}
+/* line 139, style.scss */
+#navbar li a {
+  text-decoration: none;
+}
+
+/* line 143, style.scss */
 .language {
   float: right;
 }
 
+/* line 147, style.scss */
 #tax_cloud {
   margin: 10% 0 15% 0;
 }
+/* line 148, style.scss */
 #tax_cloud p {
   color: #2b2b2b;
 }
+/* line 149, style.scss */
 #tax_cloud p strong {
   color: #2b2b2b;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-right: 5px;
 }
+/* line 150, style.scss */
 #tax_cloud p a {
   color: #2b2b2b;
   font-size: 26px;
   line-height: 1.6;
 }
+/* line 151, style.scss */
 #tax_cloud p a:hover {
-  color: #3aaf72;
+  color: red;
 }
+/* line 152, style.scss */
+#tax_cloud p a:focus {
+  color: #3aaf72;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+}
+/* line 153, style.scss */
 #tax_cloud p a.related {
   color: #3aaf72;
 }
+/* line 155, style.scss */
 #tax_cloud p a span.tax_term_count {
   font-size: 16px;
   vertical-align: super;
   padding-right: 5px;
   padding-left: 2px;
 }
-span.tax_term_separator {
-  padding-right: 10px;
-  padding-left: 1px;
-}
-#tax_cloud a:focus {
-  color: #3aaf72;
-  text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 1px solid;
+
+/* line 165, style.scss */
+.margin_10 {
+  margin-bottom: 5% !important;
 }
 
-.cloud_filter {
-  margin: 5% 0 5% 0 !important;
-}
+/* line 169, style.scss */
 #profile_description {
   display: inline-block;
   margin-bottom: 80px;
   font-weight: 400;
   padding-top: 10%;
 }
+
+/* line 178, style.scss */
 #home-posts article h1 {
   font-size: 20px;
   margin-bottom: 40px;
 }
+/* line 179, style.scss */
 #home-posts article h2 {
   font-size: 20px;
 }
+
+/* line 184, style.scss */
 .single_page .column {
   padding-bottom: 60px;
 }
-.single_page .post_attached_images {
-  padding-top: 80px;
-}
+/* line 185, style.scss */
 .single_page .post_attached_images li {
   list-style: none;
   padding-bottom: 60px;
 }
+/* line 187, style.scss */
 .single_page h2 {
   font-size: 54px;
 }
+/* line 188, style.scss */
 .single_page .single-title {
   margin: 50px 0px;
 }
+
+/* line 191, style.scss */
 footer {
+  background: #fafafa;
   margin: 20% 0 50px 0;
 }
+/* line 194, style.scss */
 footer p {
   color: #2b2b2b;
 }
+/* line 196, style.scss */
 footer nav ul {
   display: inline-flex;
 }
+/* line 197, style.scss */
 footer nav ul li {
   padding-right: 50px;
 }
+/* line 198, style.scss */
 footer nav ul li a {
   color: #2b2b2b;
   text-decoration: none;
 }
+
+/* line 204, style.scss */
 #navbar_content {
   height: auto;
   width: 100%;
 }
+
+/* line 211, style.scss */
 #cover body {
   background: url("") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -257,24 +360,33 @@ footer nav ul li a {
   background-color: #2b2b2b !important;
   color: #fafafa;
 }
+/* line 220, style.scss */
 #cover #navbar {
   color: #fafafa;
 }
+/* line 223, style.scss */
 #cover .cover_nav {
   position: fixed;
 }
+/* line 226, style.scss */
 #cover .cover_nav a {
   display: block;
 }
+
+/* line 231, style.scss */
 .header {
   height: 82%;
   width: 100%;
   display: block;
-  margin-top: -108px;
+  margin-top: -105px;
 }
+
+/* line 238, style.scss */
 .page-header-single a {
   color: white;
 }
+
+/* line 242, style.scss */
 .single-cover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -285,30 +397,46 @@ footer nav ul li a {
   width: 100%;
   min-height: 300px;
 }
+
+/* line 256, style.scss */
 .menu-single {
   padding: 8px 0px;
-  /* Cover Page specific styling */
 }
+
+/* Cover Page specific styling */
+/* line 262, style.scss */
 body.page-id-94, body.page-id-104 {
   background: #2b2b2b;
   color: #fafafa;
 }
+
+/* line 267, style.scss */
 a.page-id-94, a.page-id-104 {
   color: #fafafa;
 }
+
+/* line 271, style.scss */
 a .menu .page-id-94, a .menu .page-id-104 {
   color: #fafafa;
 }
-/*.page-id-94 #navbar li a, .page-id-104 #navbar li a {
+
+/* line 276, style.scss */
+.page-id-94 #navbar li a, .page-id-104 #navbar li a {
   color: white !important;
   cursor: pointer;
 }
+
+/* line 280, style.scss */
 .page-id-94 #navbar li a:hover, .page-id-104 #navbar li a:hover {
   color: #4a4a4a !important;
-}*/
+}
+
+/* line 284, style.scss */
 .page-id-94 .language, .page-id-104 .language {
   vertical-align: bottom;
 }
+
+/* line 287, style.scss */
 .intro {
   font-size: 36px;
   letter-spacing: 1px;
@@ -320,54 +448,65 @@ a .menu .page-id-94, a .menu .page-id-104 {
   vertical-align: bottom;
   margin-bottom: 40px;
 }
+
+/* line 299, style.scss */
 .intro a {
   font-weight: 700;
   color: #fafafa !important;
   cursor: pointer;
 }
+
+/* line 301, style.scss */
 .intro a:hover {
   color: #fafafa !important;
-  /* Cover News Items */
 }
+
+/* Cover News Items */
+/* line 305, style.scss */
 .page-id-94 .news-item h3, .page-id-104 .news-item h3 {
-  /* hide News title */
   display: none !important;
+  /* hide News title */
 }
+
+/* line 308, style.scss */
 .page-id-94 .news_post a, .page-id-104 .news_post a {
   color: #fafafa !important;
 }
+
+/* line 311, style.scss */
 .page-id-94 .news_post a:hover, .page-id-104 .news_post a:hover {
   color: #ccc !important;
-  /* Language Selector styling */
 }
+
+/* Language Selector styling */
+/* line 317, style.scss */
 #lang_sel_list ul a.lang_sel_other, #lang_sel li ul a:link, #lang_sel_list ul a.lang_sel_other:visited {
   background-color: transparent !important;
 }
+
+/* line 319, style.scss */
 #lang_sel_list a.lang_sel_sel, #lang_sel_list a.lang_sel_sel:visited {
   background-color: transparent !important;
 }
+
+/* line 321, style.scss */
 #lang_sel_list ul {
   border-top: none !important;
-  /* News Post styling */
 }
+
+/* News Post styling */
+/* line 325, style.scss */
 .news_content {
   margin-top: 10%;
 }
+
+/* line 328, style.scss */
 .news_post {
   margin-bottom: 40px;
-  min-height: 200px;
-  /* Language Selector styling */
 }
-#lang_sel_list ul a.lang_sel_other, #lang_sel li ul a:link, #lang_sel_list ul a.lang_sel_other:visited {
-  background-color: transparent !important;
-}
-#lang_sel_list a.lang_sel_sel, #lang_sel_list a.lang_sel_sel:visited {
-  background-color: transparent !important;
-}
-#lang_sel_list ul {
-  border-top: none !important;
-  /* Background Covers */
-}
+
+/* Background Covers */
+/* line 334, style.scss */
 #back {
   position: absolute;
   top: 0;
@@ -376,44 +515,48 @@ a .menu .page-id-94, a .menu .page-id-104 {
   right: 0;
   z-index: -100;
   background-color: #2b2b2b;
-  /* Media Queries */
 }
+
+/* Media Queries */
 @media (max-width: 767px) {
-    .mobile-only {
-      display: block !important;
-    }
-    #tax_cloud {
-      display: none !important;
-    }
-    footer nav ul li {
-      padding-right: 30px;
-    }
-    #footer_links li:first-child {
-     display: none;
-    }
+  /* line 347, style.scss */
+  .mobile-only {
+    display: block !important;
+  }
+
+  /* line 348, style.scss */
+  #tax_cloud {
+    display: none !important;
   }
 }
 @media (min-width: 768px) {
-  /* END */  #home-posts {
+  /* line 351, style.scss */
+  #home-posts {
     width: 70%;
     margin: 0 15%;
   }
 }
+/* END */
 @media (max-width: 767px) {
+  /* line 376, style.scss */
   .mobile-only {
     display: block !important;
   }
+
+  /* line 377, style.scss */
   .intro {
     font-size: 30px;
   }
 }
 @media (min-width: 768px) {
+  /* line 381, style.scss */
   #home-posts {
     width: 70%;
     margin: 0 15%;
   }
 }
 @media (max-width: 480px) {
+  /* line 385, style.scss */
   .intro {
     font-size: 24px;
     padding-top: 40px;

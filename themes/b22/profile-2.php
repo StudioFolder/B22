@@ -1,10 +1,10 @@
 <?php
 /*
-Template Name: Profile
+Template Name: Profile-2
 */
 ?>
 
-<?php get_header( 'single' ); ?> <!-- white + relative position -->
+<?php get_header( 'profile' ); ?> <!-- white + relative position -->
 
 <?php if (have_posts()) : ?>
 

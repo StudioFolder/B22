@@ -41,8 +41,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/_/scss/style.scss">
 
 	<script src="<?php bloginfo('template_directory') ?>/_/js/modernizr-1.7.min.js"></script>
-	<script src="<?php bloginfo('template_directory') ?>/_/js/jquery-1.5.1.min.js"></script>
-	<script src="<?php bloginfo('template_directory') ?>/_/js/B22.js"></script>
+	<!-- <script src="<?php bloginfo('template_directory') ?>/_/js/cover.js"></script> -->
 
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 
@@ -76,18 +75,12 @@
 
 <!-- end Google Analytics -->
 
-<div class="page-header">
-	<div class="container-fluid col-xl-10 col-xl-offset-1">
-		<div class="col-xs-6">
-	    	<div id="b22_logo_dark">
-			  	<a href="http://www.b22.it/web">
+	<div class="page-header-single">
+	    <div class="container-fluid col-xl-10 col-xl-offset-1">
+		    <div class="col-xs-4">
+		    	<div class="b22-logo">
+			  		<a href="http://www.b22.it/web">
 			  		<svg xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 54.2 80 32" width="70" height="30" xml:space="preserve" enable-background="new 0 54.2 80 32">
-					  <style type="text/css">
-
-						.b22_logo_1{fill:#2a2a2a;}
-						#b22_logo_dark{opacity:0.85;}
-						#b22_logo_dark:hover{opacity:1.0;}
-					  </style>
 					  <title>
 					    B22
 					  </title>
@@ -104,14 +97,14 @@
 					    </g>
 					  </g>
 					  <g>
-					    <path class="b22_logo_1" d="M12.6 61.2h-0.1V55H0v30.6h12.6c7 0 12.6-5.4 12.6-12.2C25.1 66.7 19.5 61.2 12.6 61.2z"/>
-					    <path class="b22_logo_1" d="M48.1 73.8c0.2-0.2 0.3-0.5 0.5-0.9 1-1.6 1.5-3.5 1.6-5.4 0-0.1 0-0.3 0-0.4l0 0c0-6.9-5.7-12.3-12.5-12.3 -0.2 0-0.3 0-0.5 0 -2.4 0.1-4.6 0.9-6.4 2l0.9 1.4 4.7 7.4c0.2 0.3 0.3 0.9 0.3 1.4 0 0.5-0.1 1-0.3 1.4l-3.5 5.4 -2.2 3.4 -4.8 7.1c-0.5 0.8-0.2 1.4 0.8 1.4h23.5V73.8H48.1L48.1 73.8zM48.1 73.8L48.1 73.8 48.1 73.8 48.1 73.8 48.1 73.8 48.1 73.8z"/>
-					    <path class="b22_logo_1" d="M77.8 73.8c0 0 0.3-0.5 0.5-0.9 1-1.6 1.5-3.5 1.6-5.4 0-0.1 0-0.3 0-0.4l0 0c0-6.9-5.7-12.3-12.6-12.3 -0.2 0-0.3 0-0.5 0 -2.3 0.1-4.5 0.8-6.3 2l0.9 1.4 4.7 7.4c0.2 0.3 0.3 0.9 0.3 1.4 0 0.5-0.1 1-0.3 1.4l-3.5 5.4 -2.2 3.4 -4.8 7.1c-0.5 0.8-0.2 1.4 0.8 1.4h23.5V73.8H77.8zM77.8 73.8L77.8 73.8 77.8 73.8 77.8 73.8 77.8 73.8 77.8 73.8z"/>
+					    <path class="B22-logo-light" d="M12.6 61.2h-0.1V55H0v30.6h12.6c7 0 12.6-5.4 12.6-12.2C25.1 66.7 19.5 61.2 12.6 61.2z"/>
+					    <path class="B22-logo-light" d="M48.1 73.8c0.2-0.2 0.3-0.5 0.5-0.9 1-1.6 1.5-3.5 1.6-5.4 0-0.1 0-0.3 0-0.4l0 0c0-6.9-5.7-12.3-12.5-12.3 -0.2 0-0.3 0-0.5 0 -2.4 0.1-4.6 0.9-6.4 2l0.9 1.4 4.7 7.4c0.2 0.3 0.3 0.9 0.3 1.4 0 0.5-0.1 1-0.3 1.4l-3.5 5.4 -2.2 3.4 -4.8 7.1c-0.5 0.8-0.2 1.4 0.8 1.4h23.5V73.8H48.1L48.1 73.8zM48.1 73.8L48.1 73.8 48.1 73.8 48.1 73.8 48.1 73.8 48.1 73.8z"/>
+					    <path class="B22-logo-light" d="M77.8 73.8c0 0 0.3-0.5 0.5-0.9 1-1.6 1.5-3.5 1.6-5.4 0-0.1 0-0.3 0-0.4l0 0c0-6.9-5.7-12.3-12.6-12.3 -0.2 0-0.3 0-0.5 0 -2.3 0.1-4.5 0.8-6.3 2l0.9 1.4 4.7 7.4c0.2 0.3 0.3 0.9 0.3 1.4 0 0.5-0.1 1-0.3 1.4l-3.5 5.4 -2.2 3.4 -4.8 7.1c-0.5 0.8-0.2 1.4 0.8 1.4h23.5V73.8H77.8zM77.8 73.8L77.8 73.8 77.8 73.8 77.8 73.8 77.8 73.8 77.8 73.8z"/>
 					  </g>
 					</svg>
-			  	</a>
+			  		</a>
+				</div>
 			</div>
-		</div>
 
 <!-- B22 Title H1
 			  	<a href="<?php bloginfo('url'); ?>" title="" accesskey="1">
@@ -120,58 +113,61 @@
 
 		  	</h1>
 -->
-	    <div class="col-xs-6">
-		    <nav class="navbar">
 
-		    	<div class="container-fluid">
+	    <div class="col-xs-8">
+		    <nav class="navbar navbar"> <!-- <nav class="navbar navbar-inverse navbar-fixed-top"> -->
 
-			        <div class="navbar-header">
+		      <div class="container-fluid">
 
-			          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-			            <span class="sr-only">Toggle navigation</span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-			          </button>
+		        <div class="navbar-header">
 
-			        </div>
+		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
 
-			        <div id="navbar" class="collapse navbar-collapse">
+		        </div>
 
-						<!-- wp menu -->
+		        <div id="navbar" class="collapse navbar-collapse">
+				<div class="page-id-94">
+					<!-- wp menu -->
 
-						<?php
+					<?php
 
-						$top_menu = array(
-							'theme_location'  => '',
-							'menu'            => '',
-							'container'       => '',
-							'container_class' => '',
-							'container_id'    => '',
-							'menu_class'      => 'menu',
-							'menu_id'         => '',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'items_wrap'      => '<ul id="%1$s" class="nav navbar-nav %2$s">%3$s</ul>',
-							'depth'           => 0,
-							'walker'          => ''
-						);
+					$top_menu = array(
+						'theme_location'  => '',
+						'menu'            => '',
+						'container'       => '',
+						'container_class' => '',
+						'container_id'    => '',
+						'menu_class'      => 'menu',
+						'menu_id'         => '',
+						'echo'            => true,
+						'fallback_cb'     => 'wp_page_menu',
+						'before'          => '',
+						'after'           => '',
+						'link_before'     => '',
+						'link_after'      => '',
+						'items_wrap'      => '<ul id="%1$s" class="nav navbar-nav %2$s">%3$s</ul>',
+						'depth'           => 0,
+						'walker'          => ''
+					);
 
-						wp_nav_menu( $top_menu );
+					wp_nav_menu( $top_menu );
 
-						?>
-					</div>
+					?>
+				</div>
 					<!-- / wp menu -->
-
-		    	</div> <!-- /.container-fluid -->
+				</div>
+		        </div>
 
 		        <!-- /.nav-collapse -->
 
+		      </div>
 		    </nav>
 		</div>
-	</div> <!-- /.container-fluid -->
-</div> <!-- /.page-header -->
+		</div>
+
+	</div>

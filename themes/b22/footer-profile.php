@@ -2,19 +2,18 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-xs-9">
+      <div class="col-xs-8">
         <div id="footer_links">
           <nav>
             <ul>
               <li><a href="http://www.b22.it">B22</a></li>
-              <li><a href="mailto:office@b22.it">office@b22.it</a></li>
               <li><a href="http://www.facebook.com/www.b22.it">Facebook</a></li>
               <li><a href="http://www.linkedin.com/company/b22">LinkedIn</a></li>
             </ul>
           </nav>
         </div>
       </div>
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <div class="language">
           <div id="lang_sel_list" class="lang_sel_list_horizontal">
             <?php do_action('wpml_add_language_selector'); ?>

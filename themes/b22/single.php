@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header( 'single' ); ?> <!-- white + relative position -->
 
 <?php if (have_posts()) : ?>
 
@@ -13,9 +13,17 @@ if (has_post_thumbnail( $post->ID ) ){
 }
 ?>
 
+
+<!-- Set featured image as background -->
+
+
 <div class="header">
-	<img src="<?php echo $feat_img_src; ?>" class="responsive" />
+	<?php if (has_post_thumbnail( $post->ID ) ): ?>
+	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+	<div class="single-cover" style="background-image: url('<?php echo $image[0]; ?>')"></div>
+	<?php endif; ?>
 </div>
+
 
 <div id="page_wrap" class="container single_page">
 
@@ -32,8 +40,8 @@ if (has_post_thumbnail( $post->ID ) ){
 		<div class="col-sm-6 project_specifications">
 
 			<?php the_field('project_specifications'); ?>
-			 
-			<?php 
+
+			<?php
 		//	$args = array(
 		//	    //default to current post
 		//	    'post' => 0,
@@ -44,16 +52,16 @@ if (has_post_thumbnail( $post->ID ) ){
 		//	    //this is the default
 		//	    'template' => '<li>%s: %l.</li>'
 		//	);
-		//	the_taxonomies( $args ); 
-			?> 
-			
+		//	the_taxonomies( $args );
+			?>
+
 
 		</div>
 
 		<div class="col-sm-6">
 
 			<?php /* echo '
-				<!-- 
+				<!--
 				<div class="post" id="post-<?php the_ID(); ?>">
 				<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title() ?></a></h2>
 				<div class="postMetaTop">
@@ -66,13 +74,13 @@ if (has_post_thumbnail( $post->ID ) ){
 				</div>
 				<br class="clear" />
 				<div class="postMeta">
-				<span class="tag">TAG: <?php the_tags(' ',', '); ?></span> 
+				<span class="tag">TAG: <?php the_tags(' ',', '); ?></span>
 				<span class="comments"> <?php comments_popup_link('0 commenti', '1 commento', '% commenti'); ?></span>
 				</div>
 				-->'; */ ?>
 
 				<article class="post single single-post">
-    				
+
 					<!-- ADD THIS SHARE BUTTONS
 					<div class="addthis">
 					    <div class="addthis_toolbox addthis_default_style ">
@@ -89,7 +97,7 @@ if (has_post_thumbnail( $post->ID ) ){
 					    <a class="addthis_button_email at300b" title="Email" href="#"><span class="at16nc at300bs at15nc at15t_email at16t_email">
 					    	<span class="el-icon-envelope"></span>
 					    </span></a>
-					    <a class="addthis_button_google_plusone" g:plusone:count="false"></a>    
+					    <a class="addthis_button_google_plusone" g:plusone:count="false"></a>
 					    </div>
 					    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=aiutareibambini"></script>
 					</div>
@@ -98,35 +106,36 @@ if (has_post_thumbnail( $post->ID ) ){
 			        	<?php the_content(); ?>
 			    	</div>
 
-				</article>				
-						
+				</article>
+
 		</div>
 
-		<div class="col-xs-12 post_attached_images">
+		<div class="post_image_content">
+			<div class="col-xs-12 post_attached_images">
 
-		<?php 
-				$attachments = get_posts( array(
-					'post_type' => 'attachment',
-					'posts_per_page' => -1,
-					'post_parent' => $post->ID,
-					'exclude'     => get_post_thumbnail_id()
-				) );
+			<?php
+					$attachments = get_posts( array(
+						'post_type' => 'attachment',
+						'posts_per_page' => -1,
+						'post_parent' => $post->ID,
+						'exclude'     => get_post_thumbnail_id()
+					) );
 
-				if ( $attachments ) {
-					echo "<ul>";
-					foreach ( $attachments as $attachment ) {
-						$class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-						$thumbimg = wp_get_attachment_image_src( $attachment->ID, 'original', true );
-						echo '<li class="' . $class . ' data-design-thumbnail"><img class="responsive" src="' . $thumbimg[0] . '" /></li>';
+					if ( $attachments ) {
+						echo "<ul>";
+						foreach ( $attachments as $attachment ) {
+							$class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
+							$thumbimg = wp_get_attachment_image_src( $attachment->ID, 'original', true );
+							echo '<li class="' . $class . ' data-design-thumbnail"><img class="responsive" src="' . $thumbimg[0] . '" /></li>';
+						}
+						echo "</ul>";
+
 					}
-					echo "</ul>";
-					
-				}
-			
-		?>
 
+			?>
+
+			</div>
 		</div>
-
 	</div>
 
 </div><!-- /.container -->
@@ -140,5 +149,9 @@ if (has_post_thumbnail( $post->ID ) ){
 <?php endif; ?>
 
 <br class="clear" />
+
+<div class="container-fluid">
+	<a href="#" class="scrollup">&#8593;</a>
+</div>
 
 <?php get_footer(); ?>

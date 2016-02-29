@@ -1,5 +1,11 @@
 <?php
 
+	add_filter('body_class', 'append_language_class');
+	function append_language_class($classes){
+		$classes[] = 'lang_'.ICL_LANGUAGE_CODE;  //or however you want to name your class based on the language code
+		return $classes;
+	}
+
 	add_theme_support( 'post-thumbnails' );
 
 	/* Change the post excerpt length */
@@ -8,7 +14,7 @@
 //	return 30; }
 
 	/* Disable the Admin Bar. */
-	add_filter( 'show_admin_bar', '__return_false' ); 
+	add_filter( 'show_admin_bar', '__return_false' );
 
 	/**
 	 * Register Multiple Taxonomies
@@ -17,92 +23,111 @@
 	 * @link http://www.billerickson.net/code/register-multiple-taxonomies/
 	 */
 	function be_register_taxonomies() {
+
 		$taxonomies = array(
-			array(
-				'slug'         => 'field',
-				'single_name'  => 'Field',
-				'plural_name'  => 'Fields',
-				'description'  => 'Field description lorem ipsum',
-				'post_type'    => 'post',
-				'rewrite'      => array( 'slug' => 'field' ),
-			),
-			array(
-				'slug'         => 'collaborator',
-				'single_name'  => 'Collaborator',
-				'plural_name'  => 'Collaborators',
-				'description'  => 'Collaborator description lorem ipsum',
-				'post_type'    => 'post',
-				'rewrite'      => array( 'slug' => 'collaborator' ),
-			),		
-			array(
-				'slug'         => 'location',
-				'single_name'  => 'Location',
-				'plural_name'  => 'Locations',
-				'description'  => 'Location description lorem ipsum',
-				'post_type'    => 'post',
-				'rewrite'      => array( 'slug' => 'location' ),
-			),		
-			array(
-				'slug'         => 'size',
-				'single_name'  => 'Size',
-				'plural_name'  => 'Sizes',
-				'description'  => 'Size description lorem ipsum',
-				'post_type'    => 'post',
-				'rewrite'      => array( 'slug' => 'size' ),
-			),		
-			array(
-				'slug'         => 'typology',
-				'single_name'  => 'Typology',
-				'plural_name'  => 'Typologies',
-				'description'  => 'Typology description lorem ipsum',
-				'post_type'    => 'post',
-				'rewrite'      => array( 'slug' => 'typology' ),
-			),		
-			array(
-				'slug'         => 'award',
-				'single_name'  => 'Award',
-				'plural_name'  => 'Awards',
-				'description'  => 'Award description lorem ipsum',
-				'post_type'    => 'post',
-				'rewrite'      => array( 'slug' => 'award' ),
-			),		
-			array(
-				'slug'         => 'date',
-				'single_name'  => 'Date',
-				'plural_name'  => 'Dates',
-				'description'  => 'Date description lorem ipsum',
-				'post_type'    => 'post',
-				'rewrite'      => array( 'slug' => 'date' ),
-			),		
+
+		array(
+			'slug'         => 'field',
+			'single_name'  => 'Field',
+			'plural_name'  => 'Fields',
+			'description'  => 'Field',
+			'post_type'    => 'post',
+			'rewrite'      => array( 'slug' => 'field' ),
+		),
+		array(
+			'slug'         => 'programme',
+			'single_name'  => 'Programme',
+			'plural_name'  => 'Programme',
+			'description'  => 'Programme',
+			'post_type'    => 'post',
+			'rewrite'      => array( 'slug' => 'programme' ),
+		),
+		array(
+			'slug'         => 'people',
+			'single_name'  => 'People',
+			'plural_name'  => 'People',
+			'description'  => 'People',
+			'post_type'    => 'post',
+			'rewrite'      => array( 'slug' => 'people' ),
+		),
+		array(
+			'slug'         => 'size',
+			'single_name'  => 'Size',
+			'plural_name'  => 'Size',
+			'description'  => 'Size',
+			'post_type'    => 'post',
+			'rewrite'      => array( 'slug' => 'size' ),
+		),
+
+		array(
+			'slug'         => 'location',
+			'single_name'  => 'Location',
+			'plural_name'  => 'Locations',
+			'description'  => 'Location',
+			'post_type'    => 'post',
+			'rewrite'      => array( 'slug' => 'location' ),
+		),
+
+		array(
+			'slug'         => 'client',
+			'single_name'  => 'Client',
+			'plural_name'  => 'Clients',
+			'description'  => 'Clients',
+			'post_type'    => 'post',
+			'rewrite'      => array( 'slug' => 'client' ),
+		),
+
+		array(
+			'slug'         => 'award',
+			'single_name'  => 'Award',
+			'plural_name'  => 'Awards',
+			'description'  => 'Awards',
+			'post_type'    => 'post',
+			'rewrite'      => array( 'slug' => 'award' ),
+		),
+
+		array(
+			'slug'         => 'Date',
+			'single_name'  => 'Date',
+			'plural_name'  => 'Date',
+			'description'  => 'Data',
+			'post_type'    => 'post',
+			'rewrite'      => array( 'slug' => 'date' ),
+		),
+
 		);
 		foreach( $taxonomies as $taxonomy ) {
 			$labels = array(
-				'name' => $taxonomy['plural_name'],
-				'singular_name' => $taxonomy['single_name'],
-				'description' =>  $taxonomy['description'],
-				'search_items' =>  'Search ' . $taxonomy['plural_name'],
-				'all_items' => 'All ' . $taxonomy['plural_name'],
-				'parent_item' => 'Parent ' . $taxonomy['single_name'],
-				'parent_item_colon' => 'Parent ' . $taxonomy['single_name'] . ':',
-				'edit_item' => 'Edit ' . $taxonomy['single_name'],
-				'update_item' => 'Update ' . $taxonomy['single_name'],
-				'add_new_item' => 'Add New ' . $taxonomy['single_name'],
-				'new_item_name' => 'New ' . $taxonomy['single_name'] . ' Name',
-				'menu_name' => $taxonomy['plural_name']
+				'name'				=> _x ( $taxonomy['plural_name'],'taxonomy general name'),
+				'singular_name' 	=> _x ( $taxonomy['single_name'],'taxonomy singular name'),
+				'description'		=> __ ( $taxonomy['description']),
+				'search_items'		=> __ ( 'Search ' . $taxonomy['plural_name'] ),
+				'all_items'			=> __ ( 'All ' . $taxonomy['plural_name'] ),
+				'parent_item'		=> __ ( 'Parent ' . $taxonomy['single_name'] ),
+				'parent_item_colon' => __ ( 'Parent ' . $taxonomy['single_name'] . ':' ),
+				'edit_item'			=> __ ( 'Edit ' . $taxonomy['single_name'] ),
+				'update_item'		=> __ ( 'Update ' . $taxonomy['single_name'] ),
+				'add_new_item'		=> __ ( 'Add New ' . $taxonomy['single_name'] ),
+				'new_item_name'		=> __ ( 'New ' . $taxonomy['single_name'] . ' Name' ),
+				'menu_name'			=> __ ( $taxonomy['plural_name'])
 			);
-			
+
 			$rewrite = isset( $taxonomy['rewrite'] ) ? $taxonomy['rewrite'] : array( 'slug' => $taxonomy['slug'] );
 			$hierarchical = isset( $taxonomy['hierarchical'] ) ? $taxonomy['hierarchical'] : true;
-		
+
 			register_taxonomy( $taxonomy['slug'], $taxonomy['post_type'], array(
-				'hierarchical' => $hierarchical,
-				'labels' => $labels,
-				'show_ui' => true,
-				'query_var' => true,
-				'rewrite' => $rewrite,
+		        'labels' => $labels,
+		        'public' => true,
+		        'show_in_nav_menus' => true,
+		        'show_ui' => true,
+		        'show_tagcloud' => true,
+		        'hierarchical' => true,
+		        'rewrite' => true,
+		        'query_var' => true,
+		        'rewrite' => array( 'slug' => __( $taxonomy['slug'], 'URL slug', 'text-domain' ) )
 			));
 		}
-		
+
 	}
 	add_action( 'init', 'be_register_taxonomies' );
 
@@ -143,4 +168,71 @@
 
 	  return implode('', $out );
 	}
+
+
+
+
+
+	// $genre_labels = array(
+
+	// 	'name'              => _x( 'Genres', 'taxonomy general name' ),
+
+	// 	'singular_name'     => _x( 'Genre', 'taxonomy singular name' ),
+
+	// 	'search_items'      => __( 'Search Genres' ),
+
+	// 	'all_items'         => __( 'All Genres' ),
+
+	// 	'parent_item'       => __( 'Parent Genre' ),
+
+	// 	'parent_item_colon' => __( 'Parent Genre:' ),
+
+	// 	'edit_item'         => __( 'Edit Genre' ),
+
+	// 	'update_item'       => __( 'Update Genre' ),
+
+	// 	'add_new_item'      => __( 'Add New Genre' ),
+
+	// 	'new_item_name'     => __( 'New Genre Name' ),
+
+	// 	'menu_name'         => __( 'Genre' ),
+
+	// );
+
+
+
+	// $genre_args = array(
+
+	// 	'hierarchical'      => true,
+
+	// 	'labels'            => $genre_labels,
+
+	// 	'show_ui'           => true,
+
+	// 	'show_admin_column' => true,
+
+	// 	'query_var'         => true,
+
+	// 	'rewrite'           => array( 'slug' => 'genre' ),
+
+	// );
+
+
+
+	// register_taxonomy( 'genre', array( 'post' ), $genre_args );
+
+
+
+//////////////////////////////////////////////
+//////////                          //////////
+//////////     CUSTOM POST NEWS     //////////
+//////////                          //////////
+//////////////////////////////////////////////
+
+// http://blog.teamtreehouse.com/create-your-first-wordpress-custom-post-type
+
+
+
+
+
 ?>
